@@ -17,6 +17,7 @@ IBOutlet id  HexFeld;
 IBOutlet id  BinFeld;
 IBOutlet id  IntFeld;
 IBOutlet id  WarnFeld;
+IBOutlet id  TestFeld;
 rBinHexController* BinHexController;
 }
 
