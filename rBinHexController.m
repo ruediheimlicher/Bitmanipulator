@@ -86,7 +86,7 @@ int i;
 
 - (IBAction)IntFeldAktion:(id)sender
 {
-   [TestFeld setIntValue:[TestFeld intValue]+33];
+   [TestFeld setIntValue:[TestFeld intValue]+34];
 	NSLog(@"IntFeldAktion: tag: %d string: %@",[sender tag],[sender stringValue]);
 	if ([sender intValue]>0xFF)
 	{
