@@ -29,12 +29,14 @@
 - (void)awakeFromNib
 {
 	NSLog(@"awake");
+   [TestFeld setIntValue:1];
 	
 }
 
 - (IBAction)ClearAktion:(id)sender
 {
 int i;
+   [TestFeld setIntValue:0];
 	for (i=0;i<8;i++)
 	{
 	[[[sender superview]viewWithTag:i]setState:0];
@@ -84,6 +86,7 @@ int i;
 
 - (IBAction)IntFeldAktion:(id)sender
 {
+   [TestFeld setIntValue:[TestFeld intValue]+10];
 	NSLog(@"IntFeldAktion: tag: %d string: %@",[sender tag],[sender stringValue]);
 	if ([sender intValue]>0xFF)
 	{
@@ -110,18 +113,24 @@ int i;
 
 - (IBAction)HexFeldAktion:(id)sender
 {
-	
+	[TestFeld setIntValue:[TestFeld intValue]+1];
 	NSString* HexCharString=@"0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E F";
 	//NSArray* HexArray=[[HexString componentsSeparatedByString:@" "]retain];
 	NSCharacterSet* HexSet=[NSCharacterSet characterSetWithCharactersInString:HexCharString];
 	
-	NSLog(@"HexFeldAktion: tag: %d string: %@",[sender tag],[sender stringValue]);
+	//NSLog(@"HexFeldAktion: tag: %d string: %@",[sender tag],[sender stringValue]);
 	NSString* HexString=[sender stringValue];
-	if ([HexString length]>2)
+	if ([HexString length]>2 )
 	{
 		[WarnFeld setStringValue:@"Mehr als 2 Zeichen!"];
 		return;
 	}
+   if ([HexString length]==1 )
+   {
+      HexString = [@"0" stringByAppendingString:HexString];
+      [sender setStringValue:HexString];
+   
+   }
 	unichar c0=[HexString characterAtIndex:0];
 	unichar c1=[HexString characterAtIndex:1];
 	if (!([HexSet characterIsMember:c0]&&[HexSet characterIsMember:c1]))
