@@ -50,7 +50,7 @@ int i;
 
 - (IBAction)BinTasteAktion:(id)sender
 {
-	NSLog(@"BinTasteAktion: tag: %d state: %d",[sender tag],[sender state]);
+	//NSLog(@"BinTasteAktion: tag: %d state: %d",[sender tag],[sender state]);
 	int i=[sender tag];
 		NSMutableArray* BinArray=[[[NSMutableArray alloc]initWithCapacity:8]autorelease];
 
@@ -77,7 +77,7 @@ int i;
 
 	}
 	[BinFeld setStringValue:BinString];
-	NSLog(@"BinTasteAktion BinArray: %@",[BinArray description]);
+	//NSLog(@"BinTasteAktion BinArray: %@",[BinArray description]);
 	//[[[sender superview]viewWithTag:7-i]setState:1];
 	
 	
@@ -87,7 +87,7 @@ int i;
 - (IBAction)IntFeldAktion:(id)sender
 {
    [TestFeld setIntValue:[TestFeld intValue]+1];
-	NSLog(@"IntFeldAktion: tag: %d string: %@",[sender tag],[sender stringValue]);
+	//NSLog(@"IntFeldAktion: tag: %d string: %@",[sender tag],[sender stringValue]);
 	if ([sender intValue]>0xFF)
 	{
 	[WarnFeld setStringValue:@"Zahl zu gross"];
@@ -95,7 +95,7 @@ int i;
 	}
 	[WarnFeld setStringValue:@" "];
 	NSArray* BinArray=[self BinArrayFrom:[sender intValue]];
-	NSLog(@"IntFeldAktion: BinArray: %@",[BinArray description]);
+	//NSLog(@"IntFeldAktion: BinArray: %@",[BinArray description]);
 	
 	[HexFeld setStringValue:[self HexStringFromInt:[sender intValue]]];
 	
@@ -129,8 +129,13 @@ int i;
    {
       HexString = [@"0" stringByAppendingString:HexString];
       [sender setStringValue:HexString];
-   
+      //NSLog(@"HexFeldAktion nur eine Stelle: HexString: %@",HexString);
    }
+    if ([HexString length]==0 )
+    {
+       HexString = @"00";
+       [sender setStringValue:HexString];
+    }
 	unichar c0=[HexString characterAtIndex:0];
 	unichar c1=[HexString characterAtIndex:1];
 	if (!([HexSet characterIsMember:c0]&&[HexSet characterIsMember:c1]))
@@ -157,7 +162,7 @@ int i;
 	[WarnFeld setStringValue:@" "];
 
 	NSArray* BinArray=[self BinArrayFrom:returnInt];
-	NSLog(@"HexFeldAktion: BinArray: %@",[BinArray description]);
+	//NSLog(@"HexFeldAktion: BinArray: %@",[BinArray description]);
 	[IntFeld setIntValue:returnInt];
 //
 //	[BinFeld setStringValue:[BinArray componentsJoinedByString:@""]];
@@ -214,7 +219,7 @@ int i;
 {
 	int rest=0;
 	int zahl=dieZahl;
-	NSLog(@"BinArray start: Zahl: %d",zahl);
+	//NSLog(@"BinArray start: Zahl: %d",zahl);
 	NSMutableArray* BinArray=[[[NSMutableArray alloc]initWithCapacity:8]autorelease];
 	int anzStellen=0;
 	while (zahl)
@@ -279,7 +284,7 @@ int i;
 	
 	if ([theScanner scanHexInt:&returnInt])
 	{
-		NSLog(@"HexStringZuInt string: %@ int: %x	",derHexString,returnInt);
+		//NSLog(@"HexStringZuInt string: %@ int: %x	",derHexString,returnInt);
 		return returnInt;
 	}
 	
