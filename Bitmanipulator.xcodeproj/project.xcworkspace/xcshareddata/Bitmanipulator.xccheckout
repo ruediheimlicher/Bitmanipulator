@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3F6669DE-AAE2-47E4-AFD6-FD0B57AF4DBA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Bitmanipulator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8C1FD8B14AE71BE03B27D651CF651C5CA1A86A69</key>
+		<string>https://github.com/ruediheimlicher/Bitmanipulator.git</string>
+		<key>8EB9B3D5EAE748DBD2D8B25B215586A4E6F4BC44</key>
+		<string>https://github.com/ruediheimlicher/Quiz.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Bitmanipulator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8C1FD8B14AE71BE03B27D651CF651C5CA1A86A69</key>
+		<string>../..</string>
+		<key>8EB9B3D5EAE748DBD2D8B25B215586A4E6F4BC44</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ruediheimlicher/Bitmanipulator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8C1FD8B14AE71BE03B27D651CF651C5CA1A86A69</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8EB9B3D5EAE748DBD2D8B25B215586A4E6F4BC44</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8C1FD8B14AE71BE03B27D651CF651C5CA1A86A69</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Bitmanipulator_git</string>
+		</dict>
+	</array>
+</dict>
+</plist>

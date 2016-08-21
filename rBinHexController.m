@@ -210,6 +210,11 @@ int i;
 	int i;
 	for (i=pos;i<8;i++) //String mit fuehrenden Nullen ergänzen
 	{
+		if (pos==3)
+		{
+         BinString=[@" " stringByAppendingString:BinString];
+		}
+      
 		BinString=[@"0"  stringByAppendingString:BinString];
 	}
 	return BinString;
