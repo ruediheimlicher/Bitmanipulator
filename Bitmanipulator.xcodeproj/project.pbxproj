@@ -12,6 +12,9 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		BD8867A11FDF050E008B46C0 /* 34765_256.png in Resources */ = {isa = PBXBuildFile; fileRef = BD88679F1FDF050D008B46C0 /* 34765_256.png */; };
+		BD8867A21FDF050E008B46C0 /* 34765_512.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8867A01FDF050E008B46C0 /* 34765_512.png */; };
+		BD8867A41FDF0571008B46C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8867A31FDF0571008B46C0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		32CA4F630368D1EE00C91783 /* Bitmanipulator_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bitmanipulator_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Bitmanipulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitmanipulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD88679F1FDF050D008B46C0 /* 34765_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 34765_256.png; sourceTree = "<group>"; };
+		BD8867A01FDF050E008B46C0 /* 34765_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 34765_512.png; sourceTree = "<group>"; };
+		BD8867A31FDF0571008B46C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Bitmanipulator/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 		29B97314FDCFA39411CA2CEA /* Bitmanipulator */ = {
 			isa = PBXGroup;
 			children = (
+				BD88679E1FDF04D8008B46C0 /* Icon */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -100,6 +107,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BD8867A31FDF0571008B46C0 /* Images.xcassets */,
 				1B010B190E0BF6D6006B944E /* MainMenu.nib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -114,6 +122,15 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD88679E1FDF04D8008B46C0 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				BD88679F1FDF050D008B46C0 /* 34765_256.png */,
+				BD8867A01FDF050E008B46C0 /* 34765_512.png */,
+			);
+			path = Icon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +183,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD8867A21FDF050E008B46C0 /* 34765_512.png in Resources */,
+				BD8867A41FDF0571008B46C0 /* Images.xcassets in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1B010B1B0E0BF6D6006B944E /* MainMenu.nib in Resources */,
+				BD8867A11FDF050E008B46C0 /* 34765_256.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +228,7 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -226,6 +247,7 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
